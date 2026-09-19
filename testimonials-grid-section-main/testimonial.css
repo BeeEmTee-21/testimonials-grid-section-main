@@ -4,9 +4,12 @@
 /* sass color naming */
 body{
     font-family: "Barlow Semi Condensed";
+    background-color: #d1d2d7;
 }
 
 :root{
+    /*shadow*/
+    --color-shadow: rgba(0, 0, 0, 0.05);
     /* Primary */
     --Purple_50: hsl(260, 100%, 95%);
     --Purple_300: hsl(264, 82%, 80%);
@@ -26,12 +29,16 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     min-height: 100vh;
 }
 .card{
-    width: 13.25rem;
+    width: 14.2rem;
     border-radius: 5px;
-    padding: 0px 30px;
+    padding: 15px 30px;
+    border: 50px;
+    box-shadow: 0 4px 20px 0 var(--color-shadow);
+
 }
 .image{
     border-radius: 50%;
@@ -53,4 +60,39 @@ body{
 }
 .Daniel > .author > .n1{
     border: 2px var(--White) solid;
+}
+.status{
+    font-size: 13px;
+}
+.bold{
+    font-weight: 600;
+    font-size: 18px;
+}
+.small-text{
+    font-size: 12.5px;
+}
+.Jonathan{
+    background-color: var(--Grey_500);
+    color: var(--White);
+}
+.Jonathan > .small-text, .Jonathan > .float > .status{
+    color: var(--Grey_200);
+}  
+.Jeanette,.Kira{
+    background-color: var(--White);
+    color: var(--Grey_400);
+}
+.Patrick{
+    background-color: var(--Dark_blue);
+    color: var(--White);
+}
+.Patrick> .author > .n4{
+    border: 2px var(--Purple_500) solid;
+}
+.Jeanette > .bold, .Kira > .bold{
+    color: var(--Grey_500);
+}
+.Jeanette > .float > .name, .Kira > .float > .name{
+    color: var(--Grey_500);
+    font-weight: 500;
 }
