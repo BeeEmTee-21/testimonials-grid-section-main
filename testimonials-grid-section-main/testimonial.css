@@ -2,6 +2,9 @@
 .attribution a { color: hsl(228, 45%, 44%); }
 
 /* sass color naming */
+body{
+    font-family: "Barlow Semi Condensed";
+}
 
 :root{
     /* Primary */
@@ -18,6 +21,36 @@
     --Dark_blue: hsl(219, 29%, 14%);
     --Black: hsl(0, 0%, 7%);
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 .card{
-    
+    width: 13.25rem;
+    border-radius: 5px;
+    padding: 0px 30px;
+}
+.image{
+    border-radius: 50%;
+    float: left;
+    width: 33px;
+    height: 33px;
+    margin-right: 17px;
+}
+.author{
+    display: flex;
+    float: left;
+}
+.float{
+    vertical-align: middle;
+}
+.Daniel{
+    background-color: var(--Purple_500);
+    color: var(--White);
+}
+.Daniel > .author > .n1{
+    border: 2px var(--White) solid;
 }
