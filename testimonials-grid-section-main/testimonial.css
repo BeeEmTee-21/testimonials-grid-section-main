@@ -1,2 +1,23 @@
 .attribution { font-size: 0.6875rem; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/* sass color naming */
+
+:root{
+    /* Primary */
+    --Purple_50: hsl(260, 100%, 95%);
+    --Purple_300: hsl(264, 82%, 80%);
+    --Purple_500: hsl(263, 55%, 52%);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Grey_100: hsl(214, 17%, 92%);
+    --Grey_200: hsl(0, 0%, 81%);
+    --Grey_400: hsl(224, 10%, 45%);
+    --Grey_500: hsl(217, 19%, 35%);
+    --Dark_blue: hsl(219, 29%, 14%);
+    --Black: hsl(0, 0%, 7%);
+}
+.card{
+    
+}
