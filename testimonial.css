@@ -1,13 +1,19 @@
-.attribution { font-size: 0.6875rem; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
 
 /* sass color naming */
-body{
+body {
     font-family: "Barlow Semi Condensed";
     background-color: #d1d2d7;
 }
 
-:root{
+:root {
     /*shadow*/
     --color-shadow: rgba(0, 0, 0, 0.05);
     /* Primary */
@@ -24,15 +30,23 @@ body{
     --Dark_blue: hsl(219, 29%, 14%);
     --Black: hsl(0, 0%, 7%);
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     min-height: 100vh;
 }
-.card{
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+}
+
+.card {
     width: 14.2rem;
     border-radius: 5px;
     padding: 15px 30px;
@@ -40,59 +54,127 @@ body{
     box-shadow: 0 4px 20px 0 var(--color-shadow);
 
 }
-.image{
+
+.image {
     border-radius: 50%;
     float: left;
     width: 33px;
     height: 33px;
     margin-right: 17px;
 }
-.author{
+
+.author {
     display: flex;
     float: left;
 }
-.float{
+
+.float {
     vertical-align: middle;
 }
-.Daniel{
+
+.Daniel {
     background-color: var(--Purple_500);
     color: var(--White);
 }
-.Daniel > .author > .n1{
+
+.Daniel>.author>.n1 {
     border: 2px var(--White) solid;
 }
-.status{
+
+.status {
     font-size: 13px;
 }
-.bold{
+
+.bold {
     font-weight: 600;
     font-size: 18px;
 }
-.small-text{
+
+.small-text {
     font-size: 12.5px;
 }
-.Jonathan{
+
+.Jonathan {
     background-color: var(--Grey_500);
     color: var(--White);
 }
-.Jonathan > .small-text, .Jonathan > .float > .status{
+
+.Jonathan>.small-text,
+.Jonathan>.float>.status {
     color: var(--Grey_200);
-}  
-.Jeanette,.Kira{
+}
+
+.Jeanette,
+.Kira {
     background-color: var(--White);
     color: var(--Grey_400);
 }
-.Patrick{
+
+.Patrick {
     background-color: var(--Dark_blue);
     color: var(--White);
 }
-.Patrick> .author > .n4{
+
+.Patrick>.author>.n4 {
     border: 2px var(--Purple_500) solid;
 }
-.Jeanette > .bold, .Kira > .bold{
+
+.Jeanette>.bold,
+.Kira>.bold {
     color: var(--Grey_500);
 }
-.Jeanette > .float > .name, .Kira > .float > .name{
+
+.Jeanette>.float>.name,
+.Kira>.float>.name {
     color: var(--Grey_500);
     font-weight: 500;
+}
+
+@media (min-width:600px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+
+    }
+
+    .Daniel {
+        width: 450px;
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .Jonathan {
+        width: 185px;
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .Kira {
+        width: 180px;
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+    }
+
+    .Patrick {
+        width: 450px;
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+    }
+
+    .Jeanette {
+        width: 185px;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .Jeanette > .bold{
+        font-size: 19px;
+    }
 }
